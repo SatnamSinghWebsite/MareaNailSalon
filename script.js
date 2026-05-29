@@ -1,22 +1,29 @@
+// Toggle Menu Function
+function toggleMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+
+// Close menu when clicking a link
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navMenu').classList.remove('active');
+            document.querySelector('.hamburger').classList.remove('active');
         });
-    }
+    });
 
-    // Set current year in footer
+    // Set current year
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // Set minimum date for booking form
+    // Set minimum date
     const dateInput = document.getElementById('date');
     if (dateInput) {
         const today = new Date().toISOString().split('T')[0];
@@ -24,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Form Submit Handler - Sends to WhatsApp
+// Form Submit - Sends to WhatsApp
 function handleSubmit(e) {
     e.preventDefault();
     
