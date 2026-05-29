@@ -20,8 +20,15 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">Marea<span> Nails</span></a>
-            <div class="hamburger" id="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
-            <ul class="nav-menu" id="nav-menu">
+            
+            <!-- Hamburger with onclick -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="contact.html" class="nav-link active">Contact</a></li>
@@ -95,7 +102,6 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-submit">Request Appointment</button>
-                    <p style="font-size: 0.75rem; color: #7f8c8d; margin-top: 10px; text-align: center;">*We will confirm via WhatsApp or Phone.</p>
                 </form>
             </div>
         </div>
@@ -115,4 +121,13 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col"><h4>Marea Nail Salon</h4><p>Miami's premier destination.</p></div>
-                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Book Now</a></li></ul></div
+                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Book Now</a></li></ul></div>
+                <div class="footer-col"><h4>Follow Us</h4><a href="https://www.instagram.com/mareanailsalon/?hl=en" target="_blank"><i class="fab fa-instagram"></i> @MareaNailSalon</a></div>
+            </div>
+            <div class="copyright">&copy; <span id="year"></span> Marea Nail Salon.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
