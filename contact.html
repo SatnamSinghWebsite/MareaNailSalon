@@ -26,8 +26,12 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">Marea<span> Nails</span></a>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-            <ul class="nav-links">
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
@@ -173,38 +177,23 @@
 
     <script src="script.js"></script>
     
-    <!-- Simple Form Handler Script -->
-        <!-- REPLACE THE OLD SCRIPT WITH THIS ONE -->
+    <!-- WhatsApp Form Handler -->
     <script>
         function handleSubmit(e) {
-            e.preventDefault(); // Stop page from reloading
+            e.preventDefault();
             
-            // Gather form data
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service-select').value;
+            const service = document.getElementById('service-select').options[document.getElementById('service-select').selectedIndex].text;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
 
-            // 1. FORMAT THE MESSAGE FOR WHATSAPP
-            // You can format this exactly how you want it to appear in the chat
-            const salonNumber = "13054094338"; // Phone number from business info
-            const message = `Hi Marea Nails, I would like to book an appointment:%0A` +
-                           `Name: ${name}%0A` +
-                           `Phone: ${phone}%0A` +
-                           `Service: ${service}%0A` +
-                           `Date: ${date}%0A` +
-                           `Time: ${time}`;
+            const salonNumber = "13054094338";
+            const message = `Hi Marea Nails, I would like to book an appointment:%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Date:* ${date}%0A*Time:* ${time}`;
             
-            // 2. OPEN WHATSAPP IN A NEW TAB
             window.open(`https://wa.me/${salonNumber}?text=${message}`, '_blank');
-            
-            // Show confirmation to user
-            const btn = e.target.querySelector('button');
-            btn.innerText = "Redirecting to WhatsApp...";
         }
 
-        // Prevent selecting past dates
         document.addEventListener('DOMContentLoaded', function() {
             const dateInput = document.getElementById('date');
             const today = new Date().toISOString().split('T')[0];
