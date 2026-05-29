@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marea Nail Salon | Best Nail Salon in Miami</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Floating Buttons -->
     <div class="floating-btns">
-        <a href="tel:+13054094338" class="float-btn call-float" title="Call Us"><i class="fas fa-phone"></i></a>
-        <a href="https://wa.me/13054094338" target="_blank" class="float-btn wa-float" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+13054094338" class="float-btn call-float" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/13054094338" target="_blank" class="float-btn wa-float" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <!-- Navigation -->
@@ -21,14 +25,12 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">Marea<span> Nails</span></a>
             
-            <!-- HAMBURGER BUTTON -->
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             
-            <!-- MENU LINKS -->
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
@@ -48,11 +50,18 @@
 
     <!-- Info Bar -->
     <section class="info-bar">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>7373 SW 8th St, Miami, FL</p></div>
-                <div class="info-item"><i class="fas fa-clock"></i><p>Tue - Sat: 9am - 6pm</p></div>
-                <div class="info-item"><i class="fas fa-star"></i><p>4.6 Stars (95 Reviews)</p></div>
+        <div class="container info-grid">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>7373 SW 8th St, Miami, FL</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <p>Tue - Sat: 9am - 6pm</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-star"></i>
+                <p>4.6 Stars (95 Reviews)</p>
             </div>
         </div>
     </section>
@@ -63,26 +72,26 @@
             <h2 class="section-title">Our <span>Services</span></h2>
             <div class="service-grid">
                 <div class="service-card">
-                    <i class="fas fa-hand-sparkles fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <i class="fas fa-hand-sparkles" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                     <h3>Classic Manicure</h3>
                     <p>Shape, buff, cuticle care and polish.</p>
                     <span class="price">$25</span>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-gem fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <i class="fas fa-gem" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                     <h3>Gel Manicure</h3>
                     <p>Long-lasting shine that doesn't chip.</p>
                     <span class="price">$40</span>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-spa fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <i class="fas fa-spa" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                     <h3>Spa Pedicure</h3>
                     <p>Relaxing foot massage and care.</p>
                     <span class="price">$45</span>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="services.html" class="btn" style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color);">View All Services</a>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="services.html" class="btn-outline">View All Services</a>
             </div>
         </div>
     </section>
@@ -91,11 +100,26 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col"><h4>Marea Nail Salon</h4><p>Miami's premier destination for Nail Art & Care.</p></div>
-                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Book Now</a></li></ul></div>
-                <div class="footer-col"><h4>Follow Us</h4><a href="https://www.instagram.com/mareanailsalon/?hl=en" target="_blank"><i class="fab fa-instagram"></i> @MareaNailSalon</a></div>
+                <div class="footer-col">
+                    <h4>Marea Nail Salon</h4>
+                    <p>Miami's premier destination for Nail Art & Care.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.instagram.com/mareanailsalon/?hl=en" target="_blank"><i class="fab fa-instagram"></i> @MareaNailSalon</a>
+                </div>
             </div>
-            <div class="copyright">&copy; <span id="year"></span> Marea Nail Salon. All Rights Reserved.</div>
+            <div class="copyright">
+                &copy; <span id="year"></span> Marea Nail Salon. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
