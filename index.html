@@ -26,8 +26,15 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">Marea<span> Nails</span></a>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-            <ul class="nav-links">
+            
+            <!-- Fixed Hamburger Button -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -73,4 +80,58 @@
                     <i class="fas fa-hand-sparkles fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
                     <h3>Classic Manicure</h3>
                     <p>Shape, buff, cuticle care and polish.</p>
-                    <span class="price">From
+                    <span class="price">From $25</span>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-gem fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h3>Gel Manicure</h3>
+                    <p>Long-lasting shine that doesn't chip.</p>
+                    <span class="price">From $40</span>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-spa fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h3>Spa Pedicure</h3>
+                    <p>Relaxing foot massage and care.</p>
+                    <span class="price">From $45</span>
+                </div>
+            </div>
+            
+            <!-- VIEW ALL SERVICES BUTTON -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services.html" class="btn" style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color);">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Marea Nail Salon</h4>
+                    <p>Miami's premier destination for Nail Art & Care.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.instagram.com/mareanailsalon/?hl=en" target="_blank"><i class="fab fa-instagram"></i> @MareaNailSalon</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; <span id="year"></span> Marea Nail Salon. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
