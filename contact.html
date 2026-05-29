@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Marea Nail Salon, Miami</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <a href="tel:+13054094338" class="float-btn call-float" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/13054094338" target="_blank" class="float-btn wa-float" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Marea<span> Nails</span></a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Inner Hero -->
+    <section class="hero" style="height: 50vh; background: linear-gradient(rgba(0, 137, 123, 0.9), rgba(0, 137, 123, 0.9)), url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="container hero-content">
+            <h1>Book an Appointment</h1>
+            <p>Visit us at 7373 SW 8th St, Miami</p>
+        </div>
+    </section>
+
+    <!-- Contact Container -->
+    <section class="services-preview" style="background: var(--bg-light);">
+        <div class="container">
+            
+            <!-- Top Grid: Info -->
+            <div class="service-grid" style="margin-bottom: 4rem;">
+                <div class="service-card">
+                    <i class="fas fa-phone fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
+                    <h3>Call Us</h3>
+                    <p>Prefer to talk? Call directly.</p>
+                    <p class="price" style="margin-top: 10px;">+1 305-409-4338</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-clock fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
+                    <h3>Hours</h3>
+                    <p>Tue - Sat: 9am - 6pm</p>
+                    <p>Closed Sunday & Monday</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-map-marker-alt fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
+                    <h3>Location</h3>
+                    <p>7373 SW 8th St</p>
+                    <p>Miami, FL 33144</p>
+                </div>
+            </div>
+
+            <!-- Split Layout: Form & Map -->
+            <div class="split-layout">
+                
+                <!-- Appointment Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title" style="margin-bottom: 1.5rem; font-size: 2rem;">Request Booking</h2>
+                    <form class="booking-form" action="#" method="POST" onsubmit="return handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+1 (305) 000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service-select">Service Interested In</label>
+                            <select id="service-select" name="service" required>
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="manicure">Classic Manicure ($25)</option>
+                                <option value="gel-mani">Gel Manicure ($40)</option>
+                                <option value="pedicure">Spa Pedicure ($45)</option>
+                                <option value="acrylic">Acrylic Full Set ($65)</option>
+                                <option value="sns">Gel Powder / SNS ($55)</option>
+                                <option value="nail-art">Nail Art (+$5)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <select id="time" name="time" required>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Request Appointment</button>
+                        <p style="font-size: 0.8rem; color: #7f8c8d; margin-top: 10px; text-align: center;">
+                            *We will confirm your appointment via WhatsApp or Phone.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Google Map Embed -->
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.2242495272693!2d-80.31745868454243!3d25.7629957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b927bfe1be6d%3A0x39bfb648c29a3a90!2sMarea%20Nail%20Salon!5e0!3m2!1sen!2sus!4v1656521342342!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 500px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Marea Nail Salon</h4>
+                    <p>Miami's premier destination for Nail Art & Luxury Care.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services Menu</a></li>
+                        <li><a href="contact.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.instagram.com/mareanailsalon/?hl=en" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; <span id="year"></span> Marea Nail Salon. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Simple Form Handler Script -->
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            // Get values
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service-select').options[document.getElementById('service-select').selectedIndex].text;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Simulate sending to WhatsApp API or Backend
+            // For demo purposes, we show an alert
+            btn.innerText = "Sending...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert(`Thanks ${name}! We have received your request for ${service} on ${date} at ${time}. We will contact you shortly.`);
+                e.target.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }, 1500);
+
+            return false;
+        }
+
+        // Set minimum date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('date');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        });
+    </script>
+</body>
+</html>
