@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services & Pricing | Marea Nail Salon</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -24,11 +24,15 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">Marea<span> Nails</span></a>
+            
+            <!-- Hamburger Button -->
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            
+            <!-- Menu Links -->
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="services.html" class="nav-link active">Services</a></li>
@@ -38,7 +42,7 @@
     </header>
 
     <!-- Inner Hero -->
-    <section class="mini-hero">
+    <section class="hero" style="height: 50vh; background: linear-gradient(rgba(0, 137, 123, 0.9), rgba(0, 137, 123, 0.9)), url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
         <div class="container hero-content">
             <h1>Our Services</h1>
             <p>Luxury care for your hands and feet</p>
@@ -49,44 +53,57 @@
     <section class="services-preview">
         <div class="container">
             <div class="service-grid">
+                <!-- Manicure -->
                 <div class="service-card">
-                    <i class="fas fa-hand-sparkles" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <i class="fas fa-hand-sparkles fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
                     <h3>Classic Manicure</h3>
                     <p>Shape, buff, cuticle treatment, hand massage & regular polish.</p>
                     <span class="price">$25</span>
                 </div>
+
+                <!-- Gel Manicure -->
                 <div class="service-card">
-                    <i class="fas fa-gem" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <i class="fas fa-gem fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
                     <h3>Gel Manicure</h3>
-                    <p>Long-lasting shine, no chip for 2 weeks.</p>
+                    <p>Long-lasting shine, no chip for 2 weeks, includes cuticle care.</p>
                     <span class="price">$40</span>
                 </div>
+
+                <!-- Pedicure -->
                 <div class="service-card">
-                    <i class="fas fa-spa" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <i class="fas fa-spa fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
                     <h3>Spa Pedicure</h3>
-                    <p>Foot soak, scrub, callus removal, massage.</p>
+                    <p>Foot soak, scrub exfoliation, callus removal, massage & polish.</p>
                     <span class="price">$45</span>
                 </div>
+
+                <!-- Acrylics -->
                 <div class="service-card">
-                    <i class="fas fa-paint-brush" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <i class="fas fa-paint-brush fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
                     <h3>Acrylic Full Set</h3>
-                    <p>Extensions using acrylic powder.</p>
+                    <p>Extensions using acrylic powder. Shape and polish included.</p>
                     <span class="price">$65</span>
                 </div>
+
+                <!-- Gel Powder -->
                 <div class="service-card">
-                    <i class="fas fa-magic" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <i class="fas fa-magic fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
                     <h3>Gel Powder (SNS)</h3>
-                    <p>Dip powder system for strong nails.</p>
+                    <p>Dip powder system for strong, natural looking nails.</p>
                     <span class="price">$55</span>
                 </div>
+
+                <!-- Nail Art -->
                 <div class="service-card">
-                    <i class="fas fa-palette" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <i class="fas fa-palette fa-2x" style="color: var(--primary-color); margin-bottom:15px;"></i>
                     <h3>Nail Art</h3>
-                    <p>Custom designs, chrome, French tips.</p>
-                    <span class="price">$5+</span>
+                    <p>Custom designs, chrome finish, French tips, stickers.</p>
+                    <span class="price">From $5+</span>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 2rem;">
+
+            <!-- Book Now Button -->
+            <div style="text-align: center; margin-top: 3rem;">
                 <a href="contact.html" class="btn">Book Appointment</a>
             </div>
         </div>
