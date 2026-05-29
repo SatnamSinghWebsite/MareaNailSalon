@@ -174,34 +174,37 @@
     <script src="script.js"></script>
     
     <!-- Simple Form Handler Script -->
+        <!-- REPLACE THE OLD SCRIPT WITH THIS ONE -->
     <script>
         function handleSubmit(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
+            e.preventDefault(); // Stop page from reloading
             
-            // Get values
+            // Gather form data
             const name = document.getElementById('name').value;
-            const service = document.getElementById('service-select').options[document.getElementById('service-select').selectedIndex].text;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service-select').value;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
 
-            // Simulate sending to WhatsApp API or Backend
-            // For demo purposes, we show an alert
-            btn.innerText = "Sending...";
-            btn.disabled = true;
-
-            setTimeout(() => {
-                alert(`Thanks ${name}! We have received your request for ${service} on ${date} at ${time}. We will contact you shortly.`);
-                e.target.reset();
-                btn.innerText = originalText;
-                btn.disabled = false;
-            }, 1500);
-
-            return false;
+            // 1. FORMAT THE MESSAGE FOR WHATSAPP
+            // You can format this exactly how you want it to appear in the chat
+            const salonNumber = "13054094338"; // Phone number from business info
+            const message = `Hi Marea Nails, I would like to book an appointment:%0A` +
+                           `Name: ${name}%0A` +
+                           `Phone: ${phone}%0A` +
+                           `Service: ${service}%0A` +
+                           `Date: ${date}%0A` +
+                           `Time: ${time}`;
+            
+            // 2. OPEN WHATSAPP IN A NEW TAB
+            window.open(`https://wa.me/${salonNumber}?text=${message}`, '_blank');
+            
+            // Show confirmation to user
+            const btn = e.target.querySelector('button');
+            btn.innerText = "Redirecting to WhatsApp...";
         }
 
-        // Set minimum date to today
+        // Prevent selecting past dates
         document.addEventListener('DOMContentLoaded', function() {
             const dateInput = document.getElementById('date');
             const today = new Date().toISOString().split('T')[0];
