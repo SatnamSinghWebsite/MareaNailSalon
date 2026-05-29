@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Appointment | Marea Nail Salon, Miami</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -56,7 +56,7 @@
                 <div class="service-card" style="text-align: left;">
                     <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
                     <p style="margin-bottom: 10px;">7373 SW 8th St,<br>Miami, FL 33144</p>
-                    <a href="https://www.google.com/maps/place/Marea+Nail+Salon/@25.7751231,-80.3902929,11z/data=!4m10!1m2!2m1!1sNail+Salon+IN+MIAMI!3m6!1s0x88d9b927bfe1be6d:0x39bfb648c29a3a90!8m2!3d25.7629957!4d-80.3152697!15sChNOYWlsIFNhbG9uIElOIE1JQU1JWhUiE25haWwgc2Fsb24gaW4gbWlhbWmSAQpuYWlsX3NhbG9umgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJ1YkhabFEwdEJFQUXgAQD6AQQIJRAx!16s%2Fg%2F11q8v4k17y?authuser=0&entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D" target="_blank" class="btn" style="font-size: 0.8rem; padding: 8px 20px;">Get Directions</a>
+                    <a href="https://www.google.com/maps/place/Marea+Nail+Salon" target="_blank" class="btn" style="font-size: 0.8rem; padding: 8px 20px;">Get Directions</a>
                 </div>
 
                 <div class="service-card" style="text-align: left;">
@@ -78,14 +78,27 @@
         </div>
     </section>
 
-    <!-- Booking Form Section -->
-    <section class="services-preview" style="background: var(--bg-light);">
+    <!-- Split Layout: Map Left, Form Right -->
+    <section class="form-map-section">
         <div class="container">
             <div class="split-layout">
                 
-                <!-- Appointment Form -->
+                <!-- LEFT SIDE: Map -->
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.2242495272693!2d-80.31745868454243!3d25.7629957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b927bfe1be6d%3A0x39bfb648c29a3a90!2sMarea%20Nail%20Salon!5e0!3m2!1sen!2sus!4v1656521342342!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 600px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <!-- RIGHT SIDE: Booking Form -->
                 <div class="contact-form-wrapper">
-                    <h2 class="section-title" style="margin-bottom: 1.5rem; font-size: 2rem;">Request Booking</h2>
+                    <h2 class="section-title" style="margin-bottom: 1.5rem; font-size: 2rem; text-align: left;">Request Booking</h2>
                     <form class="booking-form" action="#" method="POST" onsubmit="return handleSubmit(event)">
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -136,19 +149,6 @@
                             *We will confirm your appointment via WhatsApp or Phone.
                         </p>
                     </form>
-                </div>
-
-                <!-- Google Map Embed -->
-                <div class="map-wrapper">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.2242495272693!2d-80.31745868454243!3d25.7629957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b927bfe1be6d%3A0x39bfb648c29a3a90!2sMarea%20Nail%20Salon!5e0!3m2!1sen!2sus!4v1656521342342!5m2!1sen!2sus" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0; min-height: 500px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
                 </div>
             
             </div>
